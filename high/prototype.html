@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prototype</title>
+</head>
+<body>
+<script>
+    function Rect(x, y){
+        this.x = x;
+        this.y = y;
+        //借用构造器(funciton).apply 将this指向空对象
+        //给空对象添加x, y的属性
+        //搭建原型链
+        //返回包装后的对象
+    }
+    Rect.prototype.say = function(){
+        console.log('i am rect');
+        console.log('width:' + this.x);
+        console.log('height:' + this.y);
+    }
+    Rect.prototype.getArea = function(){
+        this.say();
+        console.log('area: ' + this.x * this.y);
+    }
+
+    var a = new Rect(10, 20);
+    var b = new Rect(20, 20);
+    a.getArea();
+    console.log(a.getArea === b.getArea)
+    console.log(a);
+    function f(){}
+    console.log(f.__proto__);
+    console.log(Rect.prototype.__proto__);
+    console.log(Rect.prototype);
+</script>
+</body>
+</html>

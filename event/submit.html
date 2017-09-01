@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提交事件</title>
+</head>
+<body>
+<form action="">
+    <ul>
+        <li>
+            <label for="">用户名</label>
+            <input type="text">
+            <span id="msg"></span>
+        </li>
+        <li>
+            <label for="">密码</label>
+            <input type="password">
+            <span></span>
+        </li>
+        <li>
+            <label for="">学历</label>
+            <select name="" id="grade">
+                <option value="http://www.baidu.com">足球</option>
+                <option value="http://www.itcrcc.cn">篮球</option>
+                <option value="3">羽毛球</option>
+                <option value="4">地球<option>
+            </select>
+        </li>
+        <li>
+            <input type="submit" value="提交">
+            <input type="reset" value="重置">
+
+        </li>
+
+    </ul>
+</form>
+<script>
+    var form1 = document.getElementsByTagName('form')[0];
+    var inputs = document.getElementsByTagName('input');
+    form1.onsubmit = function(){
+        if(inputs[0].value == '' || inputs[1].value == ''){
+            console.log('不能为空');
+            return false;
+        }
+    }
+
+    var grade = document.getElementById('grade');
+    console.log(grade);
+    grade.onchange = function(){
+        var url = this.value;
+        window.location.href = url;
+    }
+
+    inputs[0].onselect = function(){
+        console.log(this.value);
+    }
+</script>
+</body>
+</html>

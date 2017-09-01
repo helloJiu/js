@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery</title>
+    <script src="../frame/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<ul id="ul1">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+
+<ul id="ul2">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<script>
+    $(function(){
+//        $('ul').css('background', 'red');
+        $('ul>li:first+').css('background', 'green');
+        $('ul>li:eq(3)').css('background', 'blue');
+        $('ul>li:contains(3)').css('background', 'blue');
+        $('ul>li:nth-child(2)').css('font-size', 30);
+        console.log($('ul>li'));
+        var lis = $('#ul2').find('li');
+        lis.each(function(i, obj){
+            console.log(obj);
+            console.log($(obj).html());
+            console.log(i);
+        });
+    });
+</script>
+</body>
+</html>

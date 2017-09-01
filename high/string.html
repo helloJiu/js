@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>string</title>
+</head>
+<body>
+<script>
+    var string = "abcdefghigklmnopqrstuvwxyz";
+    console.log(string);
+    var arr = ['a', 'b', 'c', 'd', 'e'];
+    console.log(arr.reverse());
+
+    var t = string.split('');
+//    var arr1 = Array.prototype.reverse.call(t);
+    arr1 = t.reverse();
+    console.log(arr1);
+
+    var rs = arr1.join('');
+    console.log(rs);
+    console.log(string.split('').reverse().join(''));
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>焦点事件</title>
+</head>
+<body>
+<form action="">
+    <ul>
+        <li>
+            <label for="">用户名</label>
+            <input type="text">
+            <span id="msg"></span>
+        </li>
+        <li>
+            <label for="">密码</label>
+            <input type="password">
+            <span></span>
+        </li>
+        <li>
+            <input type="submit">
+        </li>
+
+    </ul>
+</form>
+
+    <script>
+        var inputs = document.getElementsByTagName('input');
+        var msg = document.getElementById('msg');
+
+        inputs[0].onfocus = function(){
+            msg.innerHTML = '支持中英文等';
+        }
+        inputs[0].onblur = function(){
+            if(inputs[0].value == ''){
+                msg.innerHTML = '用户名不能为空';
+            }else{
+                msg.innerHTML = '√';
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>显示和隐藏</title>
+	<style type="text/css">
+		.para {
+			color:#f00;
+			font-size: 32px;
+			font-weight: bold;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<h2 id="tit">设置显示</h2>
+	<div>haah</div>
+	<input type="button" name="" value="hide">
+	<input type="button" name="" value="show">
+	<script type="text/javascript">
+		var tit = document.getElementById('tit');
+		var inputs = document.getElementsByTagName('input');
+
+		inputs[0].onclick = function(){
+			tit.style.display = "none";
+			tit.className = "haha";
+		}
+		inputs[1].onclick = function(){
+			tit.style.display = 'block';
+			tit.className = "para";
+			console.log(typeof tit.className);
+			console.log(tit.style.color);
+			console.log(getComputedStyle(tit));
+		}
+	</script>
+
+</body>
+</html>

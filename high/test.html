@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+    <script>
+//        console.log(console);
+//        console.log(window.Object()['abc'] = 123);
+//        var a = new Array();
+//        var b = function(param){}
+//        console.log(a.__proto__);
+//        console.log(b.__proto__.constructor);
+//
+//        function f(){alert('aaa')}
+////        var a = f();
+//        var a1 = new f();
+//        console.log(a, a1, typeof a, typeof a1);
+////        a1;
+        var arr = [];
+        arr.push(1);
+        console.info(arr);
+        console.info(Array.prototype);
+        console.info(arr.hasOwnProperty('push'));
+        console.info(arr.__proto__.hasOwnProperty('push'));
+
+        function F(address, func) {
+            this.name = 'aaa';
+            this.age = '18';
+            this.address = address;
+//            this.func = func;
+        }
+        var f = new F('tainiu', function(){});
+        console.log(f.toString());
+
+    </script>
+</body>
+</html>

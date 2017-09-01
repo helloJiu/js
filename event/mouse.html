@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标事件</title>
+    <style type="text/css">
+        .title {
+            color: #f00;
+            border: 2px solid #00f;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="tit">鼠标移入移出事件</h2>
+    <script>
+        var tit = document.getElementById('tit');
+        tit.onmouseover = function(){
+            tit.className = 'title';
+        }
+        tit.onmouseout = function(){
+            tit.className = '';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo1</title>
+    <script src="../frame/jquery-2.1.4.min.js"></script>
+    <style type="text/css">
+        #box {background: green; width: 300px; height: 300px;}
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+
+    <script>
+        var tmpl = '<li id="goods{{id}}"><a href="{{ahref}}"><p>{{atext}}</p><img src="{{imgsrc}}" alt="{{imgtxt}}"></a></li>';
+
+        var obj1 = {
+            "id":1,
+            "ahref":"hahahah",
+            "atext":"helloJIU",
+            "imgsrc":"../event/meinv1.jpg",
+            "imgtxt":"hahah",
+        }
+        for(var p in obj1){
+            tmpl = tmpl.replace("{{" + p + "}}", obj1[p]);
+        }
+        console.log(tmpl);
+        $('#box').append(tmpl);
+
+    </script>
+</body>
+</html>

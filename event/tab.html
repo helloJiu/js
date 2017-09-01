@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tab</title>
+    <style type="text/css">
+        * {margin:0; padding:0;}
+        ul,li{
+            list-style: none;
+        }
+        body{
+            background: #f2f2f2;;
+            font-size: 14px;
+        }
+        .tab{
+            margin: 100px auto 0;
+            width:300px;
+            background: #fff;
+        }
+        .tab-title{
+            height: 35px;
+            line-height: 35px;
+        }
+        .tab-title li{
+            float:left;
+            width:60px;
+            text-align:center;
+        }
+        .tab-title li.on{
+            font-weight: bold;
+            border-bottom: 3px solid #ff7400;
+        }
+
+        .tab-content{
+            clear:both;
+            font-size:14px;
+            margin-top:15px;
+        }
+        .tab-content li{
+            padding:5px 0;
+        }
+        .tab-content ul{display:none;}
+    </style>
+    <script src="func.js"></script>
+</head>
+<body>
+<div class="tab">
+    <ul class="tab-title">
+        <li class="on">公告</li>
+        <li>规则</li>
+        <li>论坛</li>
+        <li>安全</li>
+    </ul>
+    <div class="tab-content">
+        <ul style="display:block;">
+            <li>
+                <a href="">点我</a>
+                <a href="">点我啊</a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="">1点我</a>
+                <a href="">1点我啊</a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="">2点我</a>
+                <a href="">3点我啊</a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="">3点我</a>
+                <a href="">4点我啊</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="foot">foot</div>
+
+<script>
+    var title_ul = document.getElementsByClassName('tab-title')[0];
+    var content_div = document.getElementsByClassName('tab-content')[0];
+    console.log(title_ul);
+    console.log(content_div);
+
+    title_lis = title_ul.getElementsByTagName('li');
+    uls = content_div.getElementsByTagName('ul');
+    len = title_lis.length;
+    for(var i = 0; i<len; i++){
+        title_lis[i].index = i;
+        title_lis[i].onmouseover = function () {
+            for(var j=0; j<len; j++){
+                title_lis[j].className = '';
+            }
+            title_lis[this.index].className = 'on';
+
+            for(var j=0; j<len; j++){
+                uls[j].style.display = 'none';
+            }
+            uls[this.index].style.display = 'block';
+        }
+    }
+
+    var foot = document.getElementById('foot');
+    addEvent(foot, 'click', function(){
+        console.log('foot');
+    });
+</script>
+</body>
+</html>

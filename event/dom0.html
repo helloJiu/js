@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom0事件</title>
+</head>
+<body>
+    <h2 id="tit1">dom 0级</h2>
+    <h2 id="tit2">dom 2级</h2>
+    <p>分离</p>
+    <script>
+        var tit1 = document.getElementById('tit1');
+        tit1.onclick = function () {
+            console.log(tit1.innerHTML);
+        }
+        var tit2 = document.getElementById('tit2');
+        tit2.addEventListener('click', function(){
+            console.log('dom2');
+            console.log(tit2.addEventListener);
+        });
+    </script>
+</body>
+</html>

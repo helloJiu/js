@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>donghua</title>
+    <script src="func.js"></script>
+    <style type="text/css">
+        #box{
+            background: #f00;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <input type="text">
+    <input type="text">
+
+    <script>
+        var box = document.getElementById('box');
+        var inputs = document.getElementsByTagName('input');
+        var x = box.offsetLeft;
+        addEvent(inputs[0], 'click', function(){
+            slide(box, box.offsetLeft, 400, 5, 50);
+        });
+        addEvent(inputs[1], 'click', function(){
+            slide(box, box.offsetLeft, 0, 5, 50);
+        });
+    </script>
+</body>
+</html>

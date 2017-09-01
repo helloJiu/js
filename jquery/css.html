@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+    <script src="../frame/jquery-2.1.4.min.js"></script>
+    <style>
+        .nav{
+            background:red;
+            width:50px;
+            height:50px;
+            position: absolute;
+            left:50px;
+            top:50px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="header">导航</div>
+    <div class="content">内容</div>
+    <script>
+        $('.box').css({
+            'width':'200px',
+            'height':'200px',
+            'background':'green',
+            'position': 'absolute',
+            'left':'200px',
+            'top':'100px',
+        });
+        $('.content').addClass('nav');
+        var box = $('.box');
+        var content = $('.content');
+        console.log(box.width());
+        console.log(box.height());
+        content.height('100px');
+        console.log(content.offset());
+        console.log(content.position());
+//        console.log(box.html());
+//        console.log(box.text('aaa'));
+        console.log(content.attr('class'));
+        box.append('<p>haha</p>');
+        $('<p>nihao</p>').appendTo($('.content'));
+    </script>
+</div>
+</body>
+</html>

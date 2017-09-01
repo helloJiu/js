@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+    <style type="text/css">
+        #box {background: green; width: 300px; height: 300px;}
+    </style>
+    <script src="../frame/jquery-2.1.4.min.js"></script>
+    <script>
+        $(function(){
+            $('#btn').bind('click', function(){
+//                var username = $('input[name=user]').val();
+//                var password = $('input[name=pass]').val();
+//                console.log(username, password);
+//                $.get(
+//                    'get.php',
+//                    'age=23',
+//                    function(res){
+//                        console.log(res);
+//                        $('<p>' + res['name'] + '</p>').appendTo('#box');
+//                        $('#box').append('<a>'+res['age']+'</a>');
+//
+//                    },
+//                    "json"
+//                );
+//                $.post(
+//                    'post.php',
+//                    {'username': username, 'password':password},
+//                    function(res){
+//                        console.log(res);
+//                    },
+//                    'json'
+//                )
+                console.log($('form').first().serializeArray());
+                $.post(
+                    'post.php',
+                    $('form').first().serializeArray(),
+                    function(res){
+                        console.log(res['user']);
+                    },
+                    'json',
+                );
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+    <form action="">
+        用户名<input type="text" name="user"><br>
+        密码<input type="password" name="pass"><br>
+        性别<input type="radio" name="sex" value="boy">男
+        <input type="radio" name="sex" value="girl">女
+        体育:
+        <input type="checkbox" name="ty[]" value="foot">足球
+        <input type="checkbox" name="ty[]" value="bask">篮球
+        <input type="checkbox" name="ty[]" value="ping">乒乓
+        <input type="checkbox" name="ty[]" value="area" checked>地球<br>
+        爱好<select name="hobby">
+        <option value="c">C</option>
+        <option value="js">JS</option>
+        <option value="php">PHP</option>
+        <option value="python">PYTHON</option>
+    </select>
+        <a id="btn" href="javascript:;">按钮</a>
+    </form>
+</body>
+</html>
