@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>watch</title>
+    <script src="../frame/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <label for="">简称</label>
+        <input type="text" v-model="num" @keyup="calc">
+        <strong>{{result}}</strong>
+    </div>
+    <script>
+        function fact(n){
+            if(n<=1)return 1;
+            return n*fact(n-1);
+        }
+
+        var vm = new Vue({
+            data : {
+                num : 0,
+                result : '',
+            },
+            watch : {
+                num : function(){
+                    this.result = '必须是数字, 并且以!结尾';
+                    if(!(this.num.indexOf('!') == -1)){
+                        this.result = '正在计算中...';
+                        var _this = this;
+                        setTimeout(function(){
+                            _this.result = fact(parseInt(_this.num));
+                        }, 5000);
+                    }
+                }
+            },
+        }).$mount('#app');
+    </script>
+</body>
+</html>

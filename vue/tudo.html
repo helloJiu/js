@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>todo</title>
+    <script src="../frame/vue.js"></script>
+    <style type="text/css">
+        .warning {background: #ff0; color: #fff}
+        .danger {background: #f00, color: #fff}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h2>hfj todo list: <span :class="totalClass">{{total}}</span></h2>
+        <input type="text" placeholder="what's your task"
+        @keyup.enter="addTodo" v-model.trim="todo">
+        <br><br>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>任务名称</th>
+                <th>完成情况</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="(todo, index) in filterTodos">
+                <td>{{index+1}}</td>
+                <td>{{todo.name}}</td>
+                <td>{{todo.done ? "yes" : "no"}}</td>
+                <td><input type="checkbox" v-model="todo.done"> </td>
+                <td><a href="" @click.prevent="removeTodo(index)">删除</a> </td>
+            </tr>
+            </tbody>
+        </table>
+        <input type="checkbox" v-model="showAll">x显示所有
+    </div>
+    <script>
+        var vm = new Vue({
+            el : '#app',
+            data : {
+                todos : [
+                    {name : '吃饭', done : true},
+                    {name : '睡觉', done : false},
+                    {name : '打LOL', done : true},
+                ],
+                todo : '',
+                showAll : false,
+            },
+            computed : {
+                total : function () {
+                    var sum = 0;
+                    this.todos.forEach(function(item){
+                        if(!item.done){
+                            ++sum;
+                        }
+                    })
+                    return sum;
+                },
+                totalClass : function(){
+                    return this.total > 2 ? 'danger' : 'warning';
+                },
+
+                filterTodos : function(){
+                    var showAll = this.showAll;
+                    return this.todos.filter(function(item){
+                        return !item.done || showAll;
+                    })
+                }
+            },
+            methods : {
+                addTodo : function(){
+                    if(this.todo == ''){
+                        console.log('hahha');
+                    }else{
+
+                        this.todos.push({
+                            name : this.todo,
+                            done : false,
+                        })
+                        this.todo = '';
+                    }
+                },
+                removeTodo : function(index){
+                    this.todos.splice(index, 1);
+                }
+            }
+        })
+    </script>
+</body>
+</html>

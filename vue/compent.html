@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>component</title>
+    <script src="../frame/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <my-header></my-header>
+        <my-footer></my-footer>
+        <my-content></my-content>
+        <p>{{goods}}</p>
+        <my-table :goods="goods"></my-table>
+        <p @transfer="getUsername">{{msg}}</p>
+    </div>
+    <my-footer></my-footer>
+    <script type="text/x-template" id="t1">
+        <div>
+            <h2>x-template方式</h2>
+            <p>可以写多个代码</p>
+            <ul>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>{{name}}</li>
+                <input type="text" v-model="hobby">
+                <p>{{hobby}}</p>
+            </ul>
+        </div>
+    </script>
+
+    <template id="t2">
+        <div>
+            <h2>x-template方式低三种方式</h2>
+            <p>可以写多个代码</p>
+            <ul>
+                <li>{{goods}}</li>
+                <li>1</li>
+                <li>1</li>
+                <li>{{name}}</li>
+                <input type="text" v-model="hobby" @keyup.enter="send(username)">
+                <p>{{hobby}}</p>
+            </ul>
+        </div>
+    </template>
+
+    <script>
+        var Home = {
+            template : '<h2>自定义组件</h2>',
+        }
+        Vue.component('my-header', Home);
+        Vue.component('my-footer', {
+            template : '<h2>我的footer{{msg}}</h2>',
+            data : function(){
+                return {
+                    msg : 'hello, header',
+                }
+            },
+        });
+        var vm = new Vue({
+            el : '#app',
+            data : {
+                goods : '手机',
+                msg : '',
+            },
+            components : {
+                'my-content' : {
+                    template : '#t1',
+                    data : function(){
+                        return {
+                            name : 'hfj',
+                            hobby : '',
+                        }
+                    }
+                },
+                'my-table' : {
+                    template : '#t2',
+                    data : function(){
+                        return {
+                            name : 'huahua',
+                            hobby : '',
+                        }
+                    },
+                    props : ['goods'],
+                    methods : {
+                        send : function(msg){
+                            this.$emit('transfer', msg);
+                        }
+                    }
+                }
+
+            },
+            methods : {
+                getUsername : function(e){
+                    this.msg = e;
+                }
+            }
+
+        })
+    </script>
+</body>
+</html>

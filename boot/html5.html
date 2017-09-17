@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../frame/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../frame/awe/css/font-awesome.min.css">
+    <script src="../frame/jquery-2.1.4.min.js"></script>
+    <script src="../frame/bootstrap/js/bootstrap.js"></script>
+    <title>Title</title>
+    <style type="text/css">
+        .search {color : #0f0f0f; font-size: 30px;}
+        .slide {width: 210px; height: 210px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="glyphicon glyphicon-save search"></span>
+        <span class="glyphicon glyphicon-random search"></span>
+        <span class="glyphicon glyphicon-sort search"></span>
+        <span class="icon-save search"></span>
+        <span class="icon-github search"></span>
+        <button class="btn">
+            <i class="icon-github search"></i>
+        </button>
+    </div>
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li><a href="#pane1"  data-toggle="tab">HTML</a> </li>
+            <li><a href="#pane2"  data-toggle="tab" class="active">css</a> </li>
+            <li><a href="#pane3"  data-toggle="tab">js</a> </li>
+            <li><a href="#pane4"  data-toggle="tab">php</a> </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane" id="pane1">
+                <br><p>html....</p>
+            </div>
+
+            <div class="tab-pane active" id="pane2">
+                <br><p>css....</p>
+            </div>
+
+            <div class="tab-pane" id="pane3">
+                <br><p>js....</p>
+            </div>
+
+            <div class="tab-pane" id="pane4">
+                <br><p>php....</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="carousel slide center-block">
+            <div class="carousel-inner">
+                <a href="" class="item active"><img src="../img/1.jpg"> </a>
+                <a href="" class="item active"><img src="../img/2.jpg"> </a>
+                <a href="" class="item active"><img src="../img/3.jpg"> </a>
+                <a href="" class="item active"><img src="../img/4.jpg"> </a>
+                <a href="" class="item active"><img src="../img/5.jpg"> </a>
+                <a href="" class="item active"><img src="../img/1.jpg"> </a>
+            </div>
+        </div>
+        <ol class="carousel-indicators">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+        <a href="" class="left carousel-control"><span class="glyphicon glyphicon-chevron-left"></span> </a>
+        <a href="" class="right carousel-control"><span class="glyphicon glyphicon-chevron-right"></span> </a>
+    </div>
+</body>
+<script>
+//    $('.nav-tabs a').on('click', function(){
+//        $(this).tab('show');
+//        e.preventDefault();
+//    })
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>event</title>
+    <script src="../frame/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div class="box" @mousedown="down($event)">haha</div>
+    <input type="text" placeholder="please username" v-model="username"
+           @keyup.enter="f1($event)">
+    <p><input type="checkbox" v-model="agree">我已同意</p>
+    <p>
+        C: <input type="checkbox" value="c" v-model="hobby">
+        PHP: <input type="checkbox" value="php" v-model="hobby">
+        JAVA: <input type="checkbox" value="java" v-model="hobby">
+        JS: <input type="checkbox" value="js" v-model="hobby">
+    </p>
+    <p>{{agree}}</p>
+    <p>{{hobby}}</p>
+</div>
+<script>
+    var vm = new Vue({
+        el : '#app',
+        data : {
+            username : '',
+            agree : false,
+            hobby : [],
+        },
+        methods : {
+            down : function(evt){
+                console.log(evt);
+            },
+            f1 : function(evt){
+                console.log(evt.keyCode);
+                    console.log(this.username);
+            }
+        }
+    })
+</script>
+</body>
+</html>

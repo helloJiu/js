@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For</title>
+    <script src="../frame/vue.js"></script>
+</head>
+<body>
+    <div id="content">
+        <template v-for="(item, key) in lists">
+            <ul>
+                <li>
+                    <span>{{item.name}}</span>
+                    <span>{{item.age}}</span>
+                    <span>{{item.hobby}}</span>
+                    <span v-if="item.status == 1">{{item.address}}</span>
+                </li>
+            </ul>
+        </template>
+    </div>
+<script>
+    var vm = new Vue({
+        el : '#content',
+        data : {
+            'lists' : [
+                {name: 'hfj', 'age': 18, 'hobby': 'c', address: '昌平', status: 1},
+                {name: 'ss', 'age': 18, 'hobby': 'php', address: '昌平', status: 0},
+                {name: 'hh', 'age': 17, 'hobby': 'python', address: '大同', status: 1},
+            ]
+        }
+    })
+</script>
+</body>
+</html>

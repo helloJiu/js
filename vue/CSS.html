@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+    <script src="../frame/vue.js"></script>
+    <style>
+        .box{width: 100px; height: 100px; background: #f00;}
+        .web-enter-active, .web-leave-active{transition: all 1s;}
+        .web-enter, .web-leave-active{opacity: 0;}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button type="button" @click="show = !show">toggle</button>
+        <br><br>
+        <transition name="web">
+            <div class="box" v-if="show"></div>
+        </transition>
+    </div>
+    <script>
+        var vm = new Vue({
+            el : '#app',
+            data : {
+                show : true,
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo2</title>
+    <script src="../frame/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="email">
+        <p>email: {{email}}</p>
+        <select v-model="hobby">
+            <option value="C">C</option>
+            <option value="PHP">PHP</option>
+            <option value="PYTHON">PYTHON</option>
+            <option value="JS">JS</option>
+        </select>
+        <input type="text" v-model="grade">
+        <p>hobby : {{hobby}}</p>
+        <p>{{msg}}</p>
+        <!--元素属性绑定-->
+        <a v-bind:href="baidu">哈哈</a>
+        <!--简写-->
+        <!--<p><a :href="google"><img :src="address"></a></p>-->
+        <!--控制css.display-->
+        <p v-show="show">哈哈哈哈</p>
+        <!--v-if插入还是删除-->
+        <p v-if="show">哈哈哈哈哈哈哈</p>
+        <p v-else>我市其他</p>
+        <p v-if="grade == 'A'">hello</p>
+        <p v-else-if="grade == 'B'">九九</p>
+        <p v-else-if="grade == 'C'">花花</p>
+        <p v-else>我是{{grade}}</p>
+        <input type="text" v-model="status">
+        <p v-if="status == 1"><a>hahhaha</a></p>
+        <ul>
+            <li v-for="(item, index) in items">{{item + '--' + index}}</li>
+        </ul>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el : '#app',
+            data : {
+                msg : 'data bind order',
+                email : '',
+                hobby : '',
+                baidu : 'http://www.baidu.com',
+                address : '../img/meinv.jpg',
+                google: 'https://www.google.com.hk/',
+                show : true,
+                grade : '',
+                status : '',
+                items : [1, 2, 4, 6, 10],
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue入门</title>
+    <script src="../frame/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>{{msg}}</h2>
+    </div>
+
+    <div id="app1">
+        手机号码: <input type="text" v-model="telephone">
+        <p>{{telephone}}</p>
+        <p>{{555}}</p>
+        <!--<p>{{'hahaa'}}</p>-->
+        <!--<p>{{Math.random()}}</p>-->
+        <!--<p>{{10 > 9 ? 'a' : 'b'}}</p>-->
+        <p v-text="age"></p>
+        <p v-text="name + 'helloJiu'"></p>
+        <div v-html="hobby"></div>
+        <div v-text="hobby"></div>
+    </div>
+    <script>
+        var vm = new Vue({
+            el : "#app",
+            data : {
+                msg : "Hello vue !",
+            }
+        });
+        console.log(vm);
+        var vm1 = new Vue({
+            el : '#app1',
+            data : {
+                telephone : '1333333333',
+                'name' : 'huahua',
+                'age' : 18,
+                'hobby' : '<p><strong>我</strong>吃</p>',
+            }
+        })
+    </script>
+</body>
+</html>

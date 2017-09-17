@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tab</title>
+    <script src="../frame/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <button type="button" @click="current='my-home'" :class="{active : current == 'my-home'}">home</button>
+    <button type="button" @click="current='my-news'">news</button>
+    <button type="button" @click="current='my-user'">user</button>
+    <component :is="current"></component>
+    <my-home></my-home>
+    <my-news></my-news>
+    <my-user></my-user>
+</div>
+<script>
+    var Home = {
+        template : "<p>shouye</p>"
+    };
+    var News = {
+        template : "<p> news </p>"
+    };
+    var User = {
+        template : "<p>user</p>"
+    };
+    var vm = new Vue({
+        el : '#app',
+        components : {
+            "my-home" : Home,
+            "my-news" : News,
+            "my-user" : User,
+        },
+        data : {
+            current : 'my-user',
+        }
+    })
+</script>
+</body>
+</html>

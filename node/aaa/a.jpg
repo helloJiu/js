@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie6 domain_so"><![endif]-->
+<!--[if IE 7 ]><html class="ie7 domain_so"><![endif]-->
+<!--[if IE 8 ]><html class="ie8 domain_so"><![endif]-->
+<!--[if IE 9 ]><html class="ie9 domain_so"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="w3c domain_so"><!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<link rel="dns-prefetch" href="//p0.so.qhmsg.com" />
+<link rel="dns-prefetch" href="//p1.so.qhmsg.com" />
+<link rel="dns-prefetch" href="//p2.so.qhmsg.com" />
+<link rel="dns-prefetch" href="//p3.so.qhmsg.com" />
+<link rel="dns-prefetch" href="//p4.so.qhmsg.com" />
+<title>加载中...</title>
+<link type="image/x-icon" rel="shortcut icon" href="/faviconso.ico"/><link rel="stylesheet" href="http://s1.qhres.com/static/ad3c24d261bae741/channel/view.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<script>window.__domainHost__ = "so";
+	window.__domainFullhost__ = "so.com";
+	window.__domainName__ = "360";
+	window.__domainFullname__ = "360搜索";</script></head>
+
+<body><!-- lightbox -->
+
+<div id="jcopeLightBox" class="jcope_lightbox">
+<div class="lb_wrapper">
+<a class="lb_exitfullscreen" href="#" title="退出全屏模式"></a>
+<div class="lb_head">
+<div class="lb_breadcrumbs" id="lbBreadcrumbs">
+<a href="/">首页</a><span class="arrow">&gt;</span><a href="/z?ch=beauty">美女</a></div>
+<div class="lb_toolbar">
+<ul class="lb_toolbarlist" id="lbToolbarList">
+<li class="item_download">
+<a href="#" class="lb_download" target="_blank" id="lbDownload"><i></i>下载</a>
+<ul class="sub_list download_list" id="downloadList"></ul>
+</li>
+<li class="bn favorite" id="favorite">
+<a href="javascript:;" class="lb_favorite" id="lbFavorite"><i></i>收藏</a>
+<div class="fav-tip lightbox-tip j-fav-tip">
+<span title="关闭" class="close-btn j-close">&times;</span><span>爱图已飞进</span><a href="/u" target="_blank" class="my-favorite">我的图片</a><span>了哦</span>
+</div>
+<div class="fav-panel j-fav-panel">
+<div class="fav-form">
+<div class="list-row">
+<div class="label">
+<label>分组</label>
+</div>
+<div class="album-list">
+<select class="j-slt-options" style="display: none;">
+</select>
+<div class="dropdown-box">
+<div class="dropdown-select j-dd-select">
+<span class="dropdown-input"><nobr>默认分组</nobr></span>
+<span class="dropdown-icon"></span>
+</div>
+<div class="dropdown-list j-dd-list">
+<dl class="dropdown-options j-dd-options">
+</dl>
+<div class="createalbum">
+<input type="text" class="album-name j-album-name" name="newalbum" title="创建新相册">
+<button class="create-btn j-create-album">创建</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="descript-row">
+<div class="label">
+<label>描述</label>
+</div>
+<textarea class="desc-input j-desc-input"></textarea>
+</div>
+<div class="fav-btn-box">
+<button class="fav-btn fav-cancel j-cancel">取消</button>
+<button class="fav-btn fav-confirm j-add-photo">保存</button>
+</div>
+</div>
+</div>
+</li>
+<li class="item_share" id="itemShare">
+<a href="javascript:;" class="lb_share"><i></i>分享</a>
+<ul class="sub_list share_list" id="shareList">
+<li><a target="_blank" href="#" class="weibo" title="分享到 新浪微博">新浪微博</a></li>
+<li><a target="_blank" href="#" class="tweibo" title="分享到 腾讯微博">腾讯微博</a></li>
+<li><a target="_blank" href="#" class="qzone" title="分享到 QQ空间">QQ空间</a></li>
+<li><a target="_blank" href="#" class="renren" title="分享到 人人网">人人网</a></li>
+<li><a target="_blank" href="#" class="douban" title="分享到 豆瓣网">豆瓣网</a></li>
+</ul>
+</li>
+<li class="item_mdownload" id="itemMdownload"><a href="#" class="lb_mdownload" id="lbMdownload"><i></i>发送到手机</a></li>
+<li><a href="#" class="lb_fullscreen" id="lbFullscreen"><i></i>全屏</a></li><!--缩放-->
+
+<li class="scale"><span class="scale_zoom scale_zoomIn">+</span>
+<input type="text" value="100%" class="scale_text"><span class="scale_zoom scale_zoomOut">-</span></li>
+<li style="display: none;"><a href="#" class="lb_zoom lb_zoomin lb_zoom_disable" id="lbZoom">原始尺寸</a></li>
+</ul>
+</div>
+</div>
+<div class="lb_body">
+<div class="lb_imgbox">
+<div class="lb_navigator">
+<a href="#" class="lb_navclose"></a>
+<div class="lb_navbox">
+<div class="lb_navmask">
+<div></div>
+</div>
+</div>
+</div>
+<a href="#" class="lb_play" id="lbPlay"></a>
+<div class="lb_tujietext">
+<div class="bg"></div>
+<p></p>
+</div>
+</div>
+<a href="#" class="lb_toggle lb_prev" id="lbPrev"><span>上一张</span></a>
+<a href="#" class="lb_toggle lb_next" id="lbNext"><span>下一张</span></a>
+<div class="lb_loading"></div>
+</div>
+<div class="lb_toolbar lb_toolbar2">
+<ul class="lb_toolbarlist" id="lbToolbarList2">
+<li class="item_autoplay">
+<a href="javascript:;" class="lb_autoplay"></a>
+<ul class="sub_list autoplay_list">
+<li><a href="javascript:;" data-default="1" title="手动播放">手动播放</a></li>
+<li><a href="javascript:;" data-sec="10" title="10秒/张">10秒/张</a></li>
+<li><a href="javascript:;" data-sec="8" title="8秒/张">8秒/张</a></li>
+<li><a href="javascript:;" data-sec="6" title="6秒/张">6秒/张</a></li>
+<li><a href="javascript:;" data-sec="4" title="4秒/张">4秒/张</a></li>
+</ul>
+</li>
+<li class="thumb"><a href="#" class="lb_thumb_toggle lb_thumb_toggle_up" id="lbThumbToggle">显示缩略图</a></li>
+</ul>
+</div>
+<div class="lb_footer" id="lbFooter"></div>
+</div>
+<div class="lb_sidebar">
+<div class="lb-sidebar-head">
+<div class="user lightbox" id="user-info">
+<div class="login-none" id="J-not-login">
+<div class="user-item">
+<a href="javascript:;" id="J-user-login" class="user-login">登录</a>
+</div>
+<div class="user-item">
+<span class="sep">|</span>
+<a href="javascript:;" id="J-user-reg" class="user-reg">注册</a>
+</div>
+</div>
+<div class="login" id="J-has-login">
+<div class="user-item">
+<a href="/u" id="J-user-names" class="user-logined" target="_blank">我的图片</a>
+</div>
+</div>
+</div>
+</div>
+<a class="lb_sidebar_toggle lb_sidebar_toggle_left" href="javascript:;" id="lbSidebarToggle_"><span></span></a>
+<div class="lb_sidebar_box">
+<div class="news_box" id="newsBox">
+<div class="news_info">
+<h3 class="lb_title" id="lbTitle"><span class="lb_pageation"><b class="lb_page_current"></b>/<span class="lb_page_total"></span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#" target="_blank" rel="noopener noreferrer"></a></h3>
+</div>
+<div class="news_desc" id="newsDesc"></div>
+<ul class="lb_toolbarlist">
+<li>
+<span class="item_imgmeta" id="imgSize">540x303</span>|<span class="item_imgmeta" id="imgVal">22KB</span>|
+						</li>
+<li>
+<a href="http://info.so.com/image_report.html?link=http%3A%2F%2Fi1.img.969g.com%2Fdown%2Fimgx2014%2F02%2F10%2F289_094349_8b500_lit.jpg&amp;q=%25E7%25BE%258E%25E5%25A5%25B3&amp;n=4" id="report" class="report" target="_blank">问题反馈</a>
+</li>
+</ul>
+<div class="news_refer">来源：
+						<a target="_blank" href="#" id="newsRefer" rel="noopener noreferrer"></a>
+</div>
+<div class="rel_img" id="rel_img" style="display: none;">
+<h4>相关图片</h4>
+<ul class="rel_img_list">
+</ul>
+</div><!-- 旅游频道广告位 -->
+
+<div class="sidebar_gg" id="sidebarGG" style="display: none;">
+</div>
+</div>
+<div class="show_box" id="showBox">
+<dl id="showList"></dl>
+<a href="#" class="show_link" id="showLink" target="_blank" rel="noopener noreferrer">和她视频聊天</a>
+</div>
+</div>
+</div>
+</div>
+<div class="tips_404" id="tips404">
+<h6>404</h6>
+<p>很抱歉，暂时无法找到你需要的内容</p>
+</div><!-- 组图推荐 -->
+
+<div class="end_layer" id="endLayer">
+<div class="end_overlay"></div>
+<div class="end_wrapper clearfix">
+<div class="end_loading" id="endLoading"></div>
+<div id='layer_head'>
+<span>精美图集推荐</span>
+<a href="#" id="review_layer" title='重新浏览'></a>
+<a href="#" id="close_layer" title='关闭'></a>
+</div>
+<div class="suggest_group">
+<ul id="suggestGroupList"></ul>
+</div>
+<div id='next_goback'></div>
+<div id='mediavAdv'>
+<iframe width="100%" height="100%" scrolling="no" align="center" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" src="about:blank"></iframe>
+</div>
+</div>
+<a href="#" class="btn_group_toggle btn_group_prev" id="btnGroupPrev" title="重新浏览该图集"><span>重新浏览该图集</span></a>
+<a href="#" class="btn_group_toggle btn_group_next" id="btnGroupNext" title="下一图集"><span>下一图集</span></a>
+</div><!-- 发送到手机 -->
+
+
+
+<div class="m_download" id="mDownload">
+<div class="close_box">
+<a href="#" class="btn_close" title="关闭窗口"></a>
+</div>
+<div class="qr_box">
+<h6>你可以扫描二维码 :</h6>
+        <p><img src="http://p9.qhimg.com/t011f3c43f568d1d40f.png" class="qr_img" id="qrImg"></p>
+</div>
+<div class="zs_box">
+<h6>也可以发送到手机 :</h6>
+<a href="#" class="btn_download" id="btnMdownload">一键发送到手机</a>
+</div>
+<div class="morelink">
+<ul>
+<li><a href="/z?ch=beauty" target="_blank">美女</a></li>
+<li><a href="/z?ch=wallpaper" target="_blank">壁纸</a></li>
+<li><a href="/z?ch=funny" target="_blank">搞笑</a></li>
+<li><a href="/z?ch=go" target="_blank">旅游</a></li>
+<li><a href="/" target="_blank">更多美图&gt;&gt;</a></li>
+</ul>
+</div>
+</div>
+
+<script type="text/data" id="initParam" data-src="relatedimg" data-ch="beauty" data-cid="模特" data-tid="街拍" data-label=""></script>
+
+<script src="http://s0.qhres.com/static/052cfadaeeebf4da/lib/jquery.js" ></script>
+
+
+<script src="http://s2.qhmsg.com/!828b1db8/monitor.js" ></script>
+
+<script src="http://js.passport.qihucdn.com/5.0.3.js" ></script>
+
+
+<script src="http://s1.qhres.com/static/345a38cc6384dbb0/channel/view.js" ></script>
+<script src="//www.so.com/zt/api/performance.js" ></script>
+<script>soPerfLog({
+        pro: 'image', 
+        pid: 'zutu_lb', 
+        q: '', 
+        hasTg: 0, 
+        hasOnebox: 0, 
+        rate: 10, 
+        resDomain: ['p.ssl.qhimg.com', 's.360.cn', 'qhimg.com', 'e.tf.360.cn', 's.qhupdate.com'] 
+    });</script>
+</body>
+
+</html>
